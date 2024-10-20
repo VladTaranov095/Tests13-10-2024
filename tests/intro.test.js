@@ -1,5 +1,5 @@
-const {status} = require('../app/original.js')
-describe('Test the function', () =>{
+const { status } = require('../app/original.js')
+describe('Test the function', () => {
     test('Must return valid values', () => {
 
         expect(status()).not.toBeUndefined()
@@ -24,9 +24,9 @@ describe('Test the function', () =>{
         expect(status(undefined)).toBe('Wrong Data')
         expect(status(null)).toBe('Wrong Data')
         expect(status(33.5)).toBe('Wrong Data')
-        
+
     })
-    
+
 
 
 

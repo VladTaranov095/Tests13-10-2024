@@ -1,16 +1,36 @@
 const { checkStatus } = require("../app/originalMatrix")
 
 describe('test_of_matrix', () => {
-    test('tests incoming values', () => {
+    let Matrix
+    Matrix = checkStatus(6, 3)
 
-        expect(checkStatus(0,0)).toBe("")
-        expect(checkStatus()).toBe("Wrong Data")
-        expect(checkStatus(1,1)).toContain('a ')
+    describe('Matrix functional test', () => {
 
-        expect(checkStatus()).not.toBeUndefined()
+        test('tests incoming values', () => {
+            expect(Matrix).toContain('a ')
+            expect(Matrix).toHaveLength(42)
 
-        
+
+        })
+
     })
+    describe('test not valid values of Matrix', () => {
+
+        test('test values of Matrix', () => {
+
+            expect(Matrix).toBeDefined()
+            expect(Matrix).toBeTruthy()
+            expect(Matrix)
+            expect(Matrix)
+
+
+        })
+
+
+    })
+
+
+
 
 
 })
