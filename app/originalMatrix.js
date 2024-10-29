@@ -9,15 +9,15 @@ function Matrix(rows, columns) {
   }
   let matrix = '';
   let i = 0;
-  let j = 0;
   while (i < rows) {
-    i++
+    let j = 0;
     while (j < columns) {
+      matrix += 'a' + " ";
       j++
-      matrix += 'a ';
     }
-    j = 0
     matrix += '\n';
+    i++
+    
 
   }
   return matrix;
