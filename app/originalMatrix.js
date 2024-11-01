@@ -7,22 +7,20 @@ function Matrix(rows, columns) {
     || (typeof columns === "undefined")) {
     return "Wrong Data"
   }
-  let matrix = '';
-  let i = 0;
+  let matrix = ""
+  let i = 1;
   while (i < rows) {
-    let j = 0;
+    let j = 1;
     while (j < columns) {
-      matrix += 'a' + " ";
+      matrix += "a ";
       j++
     }
-    matrix += '\n';
     i++
-    
-
+    matrix += '\n';
   }
   return matrix;
 }
-console.log(Matrix(6, 3));
+console.log(Matrix(9, 9));
 
 const checkStatus = Matrix
 

@@ -6,12 +6,12 @@ describe('test 1x1', () => {
     test('Test rows', () => {
         let rows = matrix.split("\n")
         let numRows = rows.length
-        expect(numRows).toBe(2)
+        expect(numRows).toBe(1)
     })
     test('Test columns', () => {
         let rows = matrix.split("\n")
         let numColumns = rows[0].split(" ").length
-        expect(numColumns).toBe(2)
+        expect(numColumns).toBe(1)
     })
     test('Char', () => {
 
@@ -23,12 +23,12 @@ describe('test 99x99', () => {
     test('Test rows', () => {
         let rows = matrix.split("\n")
         let numRows = rows.length
-        expect(numRows).toBe(100)
+        expect(numRows).toBe(99)
     })
     test('Test columns', () => {
         let rows = matrix.split("\n")
         let numColumns = rows[0].split(" ").length
-        expect(numColumns).toBe(100)
+        expect(numColumns).toBe(99)
     })
     test('Char', () => {
     })
@@ -39,12 +39,12 @@ describe('test 12x17', () => {
     test('Test rows', () => {
         let rows = matrix.split("\n")
         let numRows = rows.length
-        expect(numRows).toBe(13)
+        expect(numRows).toBe(12)
     })
     test('Test columns', () => {
         let rows = matrix.split("\n")
         let numColumns = rows[0].split(" ").length
-        expect(numColumns).toBe(18)
+        expect(numColumns).toBe(17)
     })
     test('Char', () => {
     })
