@@ -53,8 +53,9 @@ describe('test char of matrix', () => {
     test('Char "a"', () => {
         let matrix
         matrix = checkStatus(10, 10)
-        let char = "a "
-        expect(matrix).toContain("a ")
+        let ab = matrix.split("\n")
+        let char = ab[0].split(" ")
+        expect(char).toContain('a')
     })
 })
 
