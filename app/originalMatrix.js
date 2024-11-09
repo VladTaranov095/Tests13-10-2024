@@ -8,9 +8,9 @@ function Matrix(rows, columns) {
     return "Wrong Data"
   }
   let matrix = ""
-  let i = 1;
+  let i = 0;
   while (i < rows) {
-    let j = 1;
+    let j = 0;
     while (j < columns) {
       matrix += "a ";
       j++
@@ -20,7 +20,7 @@ function Matrix(rows, columns) {
   }
   return matrix;
 }
-console.log(Matrix(9, 9));
+console.log(Matrix(6, 6));
 
 const checkStatus = Matrix
 
