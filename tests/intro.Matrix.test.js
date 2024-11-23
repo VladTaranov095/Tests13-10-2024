@@ -6,17 +6,16 @@ describe('test 1x1', () => {
     test('Test rows', () => {
         let splitRows = matrix.split("\n")
         let rows = splitRows
-        let numRows = rows.filter(element => element !== "" ).length
+        let numRows = rows.filter(element => element !== "").length
         expect(numRows).toBe(1)
     })
     test('Test columns', () => {
-        let splitRows = matrix.split("\n")
-        let splitColumns = splitRows[0].split(" ")
-        let numColumns = splitColumns.filter(element => element !== "" ).length
-        expect(numColumns).toBe(1)
-    })
-    test('Char', () => {
-
+        let rows = matrix.split("\n").filter(element => element !== '');
+        rows.forEach(row => {
+            splitColumns = row.split(" ");
+            numColumns = splitColumns.filter(element => element !== '').length;
+            expect(numColumns).toBe(1)
+        })
     })
 })
 describe('test 99x99', () => {
@@ -25,16 +24,16 @@ describe('test 99x99', () => {
     test('Test rows', () => {
         let splitRows = matrix.split("\n")
         let rows = splitRows
-        let numRows = rows.filter(element => element !== "" ).length
+        let numRows = rows.filter(element => element !== "").length
         expect(numRows).toBe(99)
     })
     test('Test columns', () => {
-        let splitRows = matrix.split("\n")
-        let splitColumns = splitRows[0].split(" ")
-        let numColumns = splitColumns.filter(element => element !== "" ).length
-        expect(numColumns).toBe(99)
-    })
-    test('Char', () => {
+        let rows = matrix.split("\n").filter(element => element !== '');
+        rows.forEach(row => {
+            splitColumns = row.split(" ");
+            numColumns = splitColumns.filter(element => element !== '').length;
+            expect(numColumns).toBe(99)
+        })
     })
 })
 describe('test 12x17', () => {
@@ -43,25 +42,17 @@ describe('test 12x17', () => {
     test('Test rows', () => {
         let splitRows = matrix.split("\n")
         let rows = splitRows
-        let numRows = rows.filter(element => element !== "" ).length
+        let numRows = rows.filter(element => element !== '').length
 
         expect(numRows).toBe(12)
     })
     test('Test columns', () => {
-        let rows = matrix.split("\n")
-        let splitColumns = rows[0].split(" ")
-        let numColumns = splitColumns.filter(element => element !== "" ).length
-        expect(numColumns).toBe(17)
-    })
-})
-describe('test char of matrix', () => {
-    test('Char "a"', () => {
-        let matrix
-        matrix = checkStatus(3, 3)
-        let ab = matrix.split("\n")
-        let char = ab[0].split(" ")
-
-        expect(char).toContain("a")
+        let rows = matrix.split("\n").filter(element => element !== '');
+        rows.forEach(row => {
+            splitColumns = row.split(" ");
+            numColumns = splitColumns.filter(element => element !== '').length;
+            expect(numColumns).toBe(17)
+        })
     })
 })
 describe('test 3x3', () => {
@@ -70,14 +61,30 @@ describe('test 3x3', () => {
     test('Test rows', () => {
         let splitRows = matrix.split("\n")
         let rows = splitRows
-        let numRows = rows.filter(element => element !== "" ).length
+        let numRows = rows.filter(element => element !== "").length
 
         expect(numRows).toBe(3)
     })
     test('Test columns', () => {
-        let rows = matrix.split("\n")
-        let numColumns = rows[0].split(" ", 3).length
-        expect(numColumns).toBe(3)
+        let rows = matrix.split("\n").filter(element => element !== '');
+        rows.forEach(row => {
+            splitColumns = row.split(" ");
+            numColumns = splitColumns.filter(element => element !== '').length;
+            expect(numColumns).toBe(3)
+        })
+    })
+})
+describe('test char of matrix', () => {
+    test('Char "a"', () => {
+        let matrix
+        matrix = checkStatus(3, 3)
+        let rows = matrix.split("\n").filter(element => element !== '');
+        rows.forEach(row => {
+            splitColumns = row.split(" ");
+            numColumns = splitColumns.filter(element => element !== '');
+            let char = numColumns.some(chars => chars !== 'a')
+            expect(char).toBeFalsy()
+        })
     })
 })
 
