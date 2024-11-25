@@ -17,6 +17,15 @@ describe('test 1x1', () => {
             expect(numColumns).toBe(1)
         })
     })
+    test('Char "a"', () => {
+        let rows = matrix.split("\n").filter(element => element !== '');
+        rows.forEach(row => {
+            splitColumns = row.split(" ");
+            numColumns = splitColumns.filter(element => element !== '');
+            let char = numColumns.some(chars => chars !== 'a')
+            expect(char).toBeFalsy()
+        })
+    })
 })
 describe('test 99x99', () => {
     let matrix
@@ -33,6 +42,15 @@ describe('test 99x99', () => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '').length;
             expect(numColumns).toBe(99)
+        })
+    })
+    test('Char "a"', () => {
+        let rows = matrix.split("\n").filter(element => element !== '');
+        rows.forEach(row => {
+            splitColumns = row.split(" ");
+            numColumns = splitColumns.filter(element => element !== '');
+            let char = numColumns.some(chars => chars !== 'a')
+            expect(char).toBeFalsy()
         })
     })
 })
@@ -54,6 +72,15 @@ describe('test 12x17', () => {
             expect(numColumns).toBe(17)
         })
     })
+    test('Char "a"', () => {
+        let rows = matrix.split("\n").filter(element => element !== '');
+        rows.forEach(row => {
+            splitColumns = row.split(" ");
+            numColumns = splitColumns.filter(element => element !== '');
+            let char = numColumns.some(chars => chars !== 'a')
+            expect(char).toBeFalsy()
+        })
+    })
 })
 describe('test 3x3', () => {
     let matrix
@@ -73,11 +100,7 @@ describe('test 3x3', () => {
             expect(numColumns).toBe(3)
         })
     })
-})
-describe('test char of matrix', () => {
     test('Char "a"', () => {
-        let matrix
-        matrix = checkStatus(3, 3)
         let rows = matrix.split("\n").filter(element => element !== '');
         rows.forEach(row => {
             splitColumns = row.split(" ");
@@ -87,4 +110,5 @@ describe('test char of matrix', () => {
         })
     })
 })
+
 
