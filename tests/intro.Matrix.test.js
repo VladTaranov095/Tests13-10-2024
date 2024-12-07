@@ -1,4 +1,5 @@
 const { checkStatus } = require("../app/originalMatrix")
+const constructionElement = "a"
 
 describe('test 1x1', () => {
     let matrix
@@ -22,7 +23,7 @@ describe('test 1x1', () => {
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '');
-            let char = numColumns.some(chars => chars !== 'a')
+            let char = numColumns.some(chars => chars !== constructionElement)
             expect(char).toBeFalsy()
         })
     })
@@ -49,7 +50,7 @@ describe('test 99x99', () => {
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '');
-            let char = numColumns.some(chars => chars !== 'a')
+            let char = numColumns.some(chars => chars !== constructionElement)
             expect(char).toBeFalsy()
         })
     })
@@ -77,7 +78,7 @@ describe('test 12x17', () => {
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '');
-            let char = numColumns.some(chars => chars !== 'a')
+            let char = numColumns.some(chars => chars !== constructionElement)
             expect(char).toBeFalsy()
         })
     })
@@ -105,7 +106,7 @@ describe('test 3x3', () => {
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '');
-            let char = numColumns.some(chars => chars !== 'a')
+            let char = numColumns.some(chars => chars !== constructionElement)
             expect(char).toBeFalsy()
         })
     })
