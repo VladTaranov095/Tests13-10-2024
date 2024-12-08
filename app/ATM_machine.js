@@ -1,5 +1,11 @@
 function giveBanknotes(amount) {
     let counter = 5
+    if (amount < 0) {
+      return "Error: Cannot give the specified amount.";
+    }
+    if (Number.isInteger(amount) !== true) {
+      return "Error: The entered number is not an integer.";
+    }
     if ((amount % counter > 0) || amount < 0) {
         return "Error: Amount is not a multiple of 5.";
       }
