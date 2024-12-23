@@ -13,11 +13,16 @@ describe('Critical values', () => {
     })
 })  
 describe('Issue banknotes', () => {
-  test('Must issue right banknotes for acceptable amounts', () => {
+  test('Must issue 1465', () => {
     expect(testsATMmachine(1465)).toEqual({100: 14, 50: 1, 20: 0, 10: 1, 5: 1})
+  })
+  test('Must issue 6795', () => {
     expect(testsATMmachine(6795)).toEqual({100: 67, 50: 1, 20: 2, 10: 0, 5: 1})
   })
-  test('', () => {
-    
+})
+//Если наша программа будет не только для банкомата, но и для сайта, то могут понадобиться след. тесты:
+describe('Wrong values', () => {
+  test('If entered values not number', () => {
+    expect(testsATMmachine("as")).toEqual("You must enter number if you want to receive the money.")
   })
 })

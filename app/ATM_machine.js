@@ -1,5 +1,8 @@
 function giveBanknotes(amount) {
     let counter = 5
+    if (typeof amount !== "number"){
+      return "You must enter number if you want to receive the money."
+    }
     if (amount < 0) {
       return "Error: Cannot give the specified amount.";
     }
