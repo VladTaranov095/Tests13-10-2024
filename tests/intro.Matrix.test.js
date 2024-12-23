@@ -4,22 +4,20 @@ const constructionElement = "a"
 describe('test 1x1', () => {
     let matrix
     matrix = checkStatus(1, 1)
+    let rows = matrix.split("\n").filter(element => element !== '');
+    let expected = 1
     test('Test rows', () => {
-        let splitRows = matrix.split("\n")
-        let rows = splitRows
         let numRows = rows.filter(element => element !== "").length
-        expect(numRows).toBe(1)
+        expect(numRows).toBe(expected, `Test rows failed: expected ${expected}, received ${numRows}`)
     })
     test('Test columns', () => {
-        let rows = matrix.split("\n").filter(element => element !== '');
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '').length;
-            expect(numColumns).toBe(1)
+            expect(numColumns).toBe(expected, `Test columns failed: expected ${expected}, received ${numColumns}`)
         })
     })
     test('Char "a"', () => {
-        let rows = matrix.split("\n").filter(element => element !== '');
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '');
@@ -31,22 +29,20 @@ describe('test 1x1', () => {
 describe('test 99x99', () => {
     let matrix
     matrix = checkStatus(99, 99)
+    let rows = matrix.split("\n").filter(element => element !== '');
+    let  expected = 99
     test('Test rows', () => {
-        let splitRows = matrix.split("\n")
-        let rows = splitRows
         let numRows = rows.filter(element => element !== "").length
-        expect(numRows).toBe(99)
+        expect(numRows).toBe(expected, `Test rows failed: expected ${expected}, received ${numRows}`)
     })
     test('Test columns', () => {
-        let rows = matrix.split("\n").filter(element => element !== '');
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '').length;
-            expect(numColumns).toBe(99)
+            expect(numColumns).toBe(expected, `Test columns failed: expected ${expected}, received ${numColumns}`)
         })
     })
     test('Char "a"', () => {
-        let rows = matrix.split("\n").filter(element => element !== '');
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '');
@@ -58,23 +54,21 @@ describe('test 99x99', () => {
 describe('test 12x17', () => {
     let matrix
     matrix = checkStatus(12, 17)
+    let rows = matrix.split("\n").filter(element => element !== '');
     test('Test rows', () => {
-        let splitRows = matrix.split("\n")
-        let rows = splitRows
-        let numRows = rows.filter(element => element !== '').length
-
-        expect(numRows).toBe(12)
+        let numRows = rows.filter(element => element !== "").length
+        expected = 12
+        expect(numRows).toBe(expected, `Test rows failed: expected ${expected}, received ${numRows}`)
     })
     test('Test columns', () => {
-        let rows = matrix.split("\n").filter(element => element !== '');
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '').length;
-            expect(numColumns).toBe(17)
+            expected = 17
+            expect(numColumns).toBe(expected, `Test columns failed: expected ${expected}, received ${numColumns}`)
         })
     })
     test('Char "a"', () => {
-        let rows = matrix.split("\n").filter(element => element !== '');
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '');
@@ -86,23 +80,20 @@ describe('test 12x17', () => {
 describe('test 3x3', () => {
     let matrix
     matrix = checkStatus(3, 3)
+    let rows = matrix.split("\n").filter(element => element !== '');
+    let expected = 3
     test('Test rows', () => {
-        let splitRows = matrix.split("\n")
-        let rows = splitRows
         let numRows = rows.filter(element => element !== "").length
-
-        expect(numRows).toBe(3)
+        expect(numRows).toBe(expected, `Test rows failed: expected ${expected}, received ${numRows}`)
     })
     test('Test columns', () => {
-        let rows = matrix.split("\n").filter(element => element !== '');
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '').length;
-            expect(numColumns).toBe(3)
+            expect(numColumns).toBe(expected, `Test columns failed: expected ${expected}, received ${numColumns}`)
         })
     })
     test('Char "a"', () => {
-        let rows = matrix.split("\n").filter(element => element !== '');
         rows.forEach(row => {
             splitColumns = row.split(" ");
             numColumns = splitColumns.filter(element => element !== '');
